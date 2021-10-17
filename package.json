@@ -1,0 +1,33 @@
+{
+  "name": "e-commerce-project",
+  "version": "1.0.0",
+  "description": "This is an E-Commerce Project",
+  "main": "index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "angular": "^1.8.2",
+    "angular-resource": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "autoprefixer": "^10.3.7",
+    "bootstrap": "^4.6.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13",
+    "postcss-cli": "^9.0.1",
+    "simplebar": "^5.3.6",
+    "tiny-slider": "^2.9.3"
+  },
+  "devDependencies": {
+    "sass": "^1.42.1"
+  },
+  "scripts": {
+    "compile:sass": "sass --watch app/components:assets/css"
+  },
+  "keywords": [
+    "sass",
+    "bootstrap@4.6",
+    "angularjs",
+    "angularjs-route"
+  ],
+  "author": "Earl Pascual",
+  "license": "ISC"
+}
