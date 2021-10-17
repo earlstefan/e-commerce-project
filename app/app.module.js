@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-angular.module('app', [
-    'ngRoute',
-    'ngResource',
-    'headerComponent',
-    'carouselComponent',
-    'cardComponent',
-    'footerComponent'
-    ]);
+angular.module("app", [
+  "ngRoute",
+  "ngResource",
+  "headerComponent",
+  "carouselComponent",
+  "productListModule",
+  "footerComponent",
+]);
