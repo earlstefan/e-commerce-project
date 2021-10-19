@@ -1,9 +1,9 @@
 "use strict";
 
-angular.module("productModule").component("productComponent", {
-  templateUrl: "../app/components/product-list/product/product.component.html",
+angular.module("carouselModule").component("carouselComponent", {
+  templateUrl: "../app/shared/carousel/carousel.component.html",
   controller: function ($scope, $location) {
-    $scope.title = "Hello Bitch!";
+    $scope.title = "Hello Fam!";
 
     $scope.blogItems = [
       {
@@ -30,5 +30,26 @@ angular.module("productModule").component("productComponent", {
 
     $scope.items = $scope.blogItems;
     $scope.$location = $location;
+    let slider = tns({
+      container: ".tns-slider",
+      items: 1,
+      slideBy: "page",
+      mouseDrag: true,
+      controlsPosition: "bottom",
+      navPosition: "bottom",
+      autoplayButtonOutput: false,
+      autoplay: true,
+      responsive: {
+        640: {
+          items: 1,
+        },
+        1000: {
+          items: 1,
+        },
+        1400: {
+          items: 1,
+        },
+      },
+    });
   },
 });

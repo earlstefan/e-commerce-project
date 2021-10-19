@@ -1,7 +1,7 @@
-$main:  #1A1B41 !default;
-$sub:  #C2E7DA !default;
+$main: #1a1b41 !default;
+$sub: #c2e7da !default;
 
-$white:    #fff !default;
+$white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -11,9 +11,9 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black: #000 !default;
 
 $primary: $main;
 $secondary: $sub;
 
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

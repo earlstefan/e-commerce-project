@@ -1,7 +1,7 @@
 "use strict";
 
-angular.module("productListModule").component("productListComponent", {
-  templateUrl: "../app/components/product-list/product-list.component.html",
+angular.module("productListModule").component("productComponent", {
+  templateUrl: "../app/shared/product-list/product/product.component.html",
   controller: function ($scope, $location) {
     $scope.title = "Hello Bitch!";
 

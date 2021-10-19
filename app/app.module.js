@@ -3,8 +3,8 @@
 angular.module("app", [
   "ngRoute",
   "ngResource",
-  "headerComponent",
-  "carouselComponent",
+  "headerModule",
+  "carouselModule",
   "productListModule",
-  "footerComponent",
+  "footerModule",
 ]);

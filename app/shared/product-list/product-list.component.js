@@ -1,9 +1,25 @@
 "use strict";
 
-angular.module("footerModule").component("footerComponent", {
-  templateUrl: "../app/components/footer/footer.component.html",
-  controller: function ($scope, $location) {
+angular.module("productListModule").component("productListComponent", {
+  templateUrl: "../app/shared/product-list/product-list.component.html",
+  controller: function ($scope, $location, $http) {
     $scope.title = "Hello Bitch!";
+    $scope.a = 0;
+    $scope.b = 0;
+
+    $scope.doSum = (a, b) => {
+      $http({
+        url: "http://localhost:8000/Sum?a=" + a + "&b=" + b,
+        method: "GET",
+      }).then(
+        (res) => {
+          console.log(res.data);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    };
 
     $scope.blogItems = [
       {
