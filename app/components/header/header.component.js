@@ -3,7 +3,11 @@
 angular.module("headerModule").component("headerComponent", {
   templateUrl: "../app/components/header/header.component.html",
   controller: function ($scope, $location) {
-    $scope.title = "Hello Bitch!";
+    $scope.searchProduct = "HEYYYY";
+
+    $scope.addProduct = () => {
+      $location.path("/home/addProduct");
+    };
 
     $scope.blogItems = [
       {

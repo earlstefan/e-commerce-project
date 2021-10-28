@@ -20,10 +20,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
-    <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
-    <link rel="stylesheet" media="screen" href="node_modules/simplebar/dist/simplebar.min.css">
-    <link rel="stylesheet" media="screen" href="node_modules/tiny-slider/dist/tiny-slider.css">
-  <!-- Main Theme Styles + Bootstrap-->
+  <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+  <link rel="stylesheet" media="screen" href="node_modules/simplebar/dist/simplebar.min.css">
+  <link rel="stylesheet" media="screen" href="node_modules/tiny-slider/dist/tiny-slider.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -38,39 +37,22 @@
   <script src="app/components/header/header.module.js"></script>
   <script src="app/components/header/header.component.js"></script>
   <script src="app/components/home/home.module.js"></script>
-  <!-- <script src="app/components/home/home.config.js"></script> -->
   <script src="app/components/home/home.service.js"></script>
   <script src="app/components/home/home.component.js"></script>
   <script src="app/components/footer/footer.module.js"></script>
   <script src="app/components/footer/footer.component.js"></script>
-  <script src="app/shared/carousel/carousel.module.js"></script>
-  <script src="app/shared/carousel/carousel.component.js"></script>
-  <script src="app/shared/product-list/product-list.module.js"></script>
-  <script src="app/shared/product-list/product-list.component.js"></script>
-  <script src="app/shared/product-list/product/product.component.js"></script>
-
-
+  <script src="app/shared/carousel/carousel.directive.js"></script>
+  <script src="app/shared/product-list/product-list.directive.js"></script>
+  <script src="app/shared/product-list/product-detail/product-detail.controller.js"></script>
+  <script src="app/shared/product-list/product/product.directive.js"></script>
+  <script src="app/shared/product-list/product-add/product-add.controller.js"></script>
+  <script src="app/shared/product-list/product-edit/product-edit.controller.js"></script>
 </head>
 
 <body class="handheld-toolbar-enabled">
-
-  <main class="page-wrapper">
-    <!-- Navbar Electronics Store-->
-    <header-component></header-component>
-    <home-component></home-component>
+  <header-component></header-component>
+  <main class="page-wrapper" ng-view>
+    
   </main>
-  <!-- Footer-->
-  <footer-component></footer-component>
-
-  <!-- Vendor scrits: js libraries and plugins-->
-  <!-- <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/simplebar/dist/simplebar.min.js"></script>
-  <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
-  <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-  <script src="vendor/drift-zoom/dist/Drift.min.js"></script>
-  <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
-  <script src="vendor/lg-video.js/dist/lg-video.min.js"></script> -->
-
 </body>
-
 </html>

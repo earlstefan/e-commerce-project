@@ -1,20 +1,42 @@
 "use strict";
 
 angular.module("app").config(function ($locationProvider, $routeProvider) {
-  $locationProvider.html5Mode({
-    enabled: true,
-  });
+  $locationProvider.hashPrefix("");
   $routeProvider
     .when("/", {
-      template: "Hello",
+      template: "<home-component></home-component>",
     })
-    .when("/blog/:id", {
-      template: "Hello World!",
+    .when("/home", {
+      template: "<home-component></home-component>",
     })
-    .when("/footer", {
-      templateUrl: "app/components/footer/footer.component.html",
+    .when("/home/addProduct", {
+      templateUrl: "../app/shared/product-list/product-add/product-add.html",
+      controller: "productAddController",
+    })
+    .when("/home/product/:ProductID", {
+      templateUrl:
+        "../app/shared/product-list/product-detail/product-detail.html",
+      controller: "productDetailController",
+      resolve: {
+        productDetail: function (getProductService, $route) {
+          console.log(getProductService);
+          console.log($route);
+          return getProductService.getProduct($route.current.params.ProductID);
+        },
+      },
+    })
+    .when("/home/product/:ProductID/edit", {
+      templateUrl: "../app/shared/product-list/product-edit/product-edit.html",
+      controller: "productEditController",
+      resolve: {
+        productDetail: function (getProductService, $route) {
+          console.log(getProductService);
+          console.log($route);
+          return getProductService.getProduct($route.current.params.ProductID);
+        },
+      },
     })
     .otherwise({
-      template: "Not found",
+      template: "<home-component></home-component>",
     });
 });

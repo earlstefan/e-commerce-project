@@ -5,7 +5,5 @@ angular.module("app", [
   "ngResource",
   "headerModule",
   "homeModule",
-  "carouselModule",
-  "productListModule",
   "footerModule",
 ]);

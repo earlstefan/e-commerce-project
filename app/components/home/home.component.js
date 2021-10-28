@@ -6,11 +6,13 @@ angular.module("homeModule").component("homeComponent", {
     $scope.title = "Hello Bitch!";
     $scope.a = 0;
     $scope.b = 0;
-    $scope.productList = [];
+    $scope.products = [];
+    $scope.searchProducts = [];
 
     getProductListService.getProductList((res) => {
-      $scope.productList = res;
-      console.log($scope.productList);
+      $scope.products = res;
+      $scope.searchProducts = res;
+      console.log($scope.products);
     });
   },
 });
